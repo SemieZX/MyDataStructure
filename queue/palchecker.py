@@ -1,6 +1,6 @@
 # 用双向队列可以很轻松解决 判断回文问题
 # 先将字符串以普通队列方式入队，之后不断迭代判断首尾元素是否相等
-
+# 现在deque不是这么导入
 from pythonds.basic.deque import Deque
 def palchecker(aString):
     chardeque = deQue()
