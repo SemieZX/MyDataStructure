@@ -11,7 +11,7 @@ def bubbleSort(alist):
                 exchange=True
         if not exchange:
             break
-    return alist
+    return
 
 
 def selectionSort(alist):
@@ -21,7 +21,7 @@ def selectionSort(alist):
             if alist[j] < alist[minposition]:
                 minposition = j
         alist[i],alist[minposition] = alist[minposition],alist[i]
-    return alist
+    return 
 
 
 def insertionSort(alist):
@@ -32,7 +32,7 @@ def insertionSort(alist):
             alist[position] = alist[position-1]
             position = position -1
         alist[position] = currentvalue
-    return alist
+    return 
 
 
 def shellSort(alist):
@@ -41,7 +41,7 @@ def shellSort(alist):
         for startpos in range(gap):
             gapInsertionSort(alist,startpos,gap)
         gap = gap//2
-    return alist
+    return 
 
 
 def gapInsertionSort(alist,startpos,gap):
