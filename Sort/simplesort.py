@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from random import randint
 import timeit
+import copy
 
 def bubbleSort(alist):
     exchange = False
@@ -21,7 +22,7 @@ def selectionSort(alist):
             if alist[j] < alist[minposition]:
                 minposition = j
         alist[i],alist[minposition] = alist[minposition],alist[i]
-    return 
+    return
 
 
 def insertionSort(alist):
@@ -32,7 +33,7 @@ def insertionSort(alist):
             alist[position] = alist[position-1]
             position = position -1
         alist[position] = currentvalue
-    return 
+    return
 
 
 def shellSort(alist):
@@ -41,7 +42,7 @@ def shellSort(alist):
         for startpos in range(gap):
             gapInsertionSort(alist,startpos,gap)
         gap = gap//2
-    return 
+    return
 
 
 def gapInsertionSort(alist,startpos,gap):
@@ -59,7 +60,6 @@ def gapInsertionSort(alist,startpos,gap):
 # test the speed
 max = 5000
 list=[randint(-max,max) for x in range(max)]
-
 alist = list[:]
 blist = list[:]
 clist = list[:]
